@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Convert HTML to PDF using JavaScript</title>
+
+        <!-- jsPDF library-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+        <script>
+        window.jsPDF = window.jspdf.jsPDF;
+        
+        function generatePDF(){
+            var doc = new jsPDF();
+
+            doc.text(20, 20, 'Hello world!');
+
+            // set font
+            doc.setFont("helvetica", "bold");
+            doc.text(20, 30, 'This is client-side Javascript to generate a PDF.');
+
+            // Add new page
+            doc.addPage();
+            doc.text(20, 20, 'Some text');
+            doc.text(20, 30, 'Some more text'); 
+
+            // Save the PDF
+            doc.save('document.pdf');
+        }
+        </script>
+    </head>
+    <body>
+        <!-- Trigger button -->
+        <button onclick="generatePDF()">Generate PDF</button>
+    </body>
+</html>
