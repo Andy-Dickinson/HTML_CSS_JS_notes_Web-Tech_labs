@@ -1,0 +1,22 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: tomato;
+    padding: 10px;
+}
+
+/* > selects all direct decendents */
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8); /*0.8 here is transparency*/
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+/* Specifies 'item1 should be wider,
+by starting at column 1 and ending at column 3 */
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

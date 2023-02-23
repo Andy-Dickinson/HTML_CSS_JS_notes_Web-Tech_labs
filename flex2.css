@@ -1,0 +1,56 @@
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Apply settings to all elements withint "wrapper" class */
+.wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+.header {
+    background: tomato;
+}
+
+.footer {
+    background: lightgreen;
+}
+
+.main {
+    text-align: left;
+    background: deepskyblue;
+}
+
+.aside-1 {
+    background: gold;
+}
+
+.aside-2 {
+    background: hotpink;
+}
+
+/* Sets how each section behaves for different screen sizes
+Check out developer tools inspector, click phone icon top 
+left and go back to page to resize to see what happens */
+@media all and (min-width: 600px) {
+    .aside { flex: 1 0 0; } /* flex-grow flex-shrink flex-basis 
+                                grow specifies how much item will grow relative to rest of flexible items,
+                                shrink specifies how much item will shrink relative to rest of flexible items,
+                                basis is the length of the item, can be set to auto.*/
+}
+
+/* Same as above, but for 800px and above */
+@media all and (min-width: 800px) {
+    .main { flex: 3 0px; }
+    .aside-1 { order: 1; } /* sets order sections are displayed (above min-width specified)*/
+    .main { order: 2; }
+    .aside-2 { order: 3; }
+    .footer { order: 4; }
+}
+
+body {
+    padding: 2em;
+}
