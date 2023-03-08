@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Faster than the other methods of implementing js
+             If two pages use the same JavaScript external file then instead of loading it twice, as
+             would happen if the JavaScript was between <script> tags in the respective HTML files, instead
+             it is downloaded for the first page that your user navigates to then is saved in the browser and
+             reused, but not re-downloaded, when referenced from the other file. This can lead to large saving
+             in network bandwidth but also better performance of your sites as loading from local memory is
+             nearly always much faster than reloading across the network -->
+        <script src="js/hello.js"></script>
+        <title>SET08101 - External JavaScript</title>
+    </head>
+    <body>
+        <p><a href="#" onclick="helloFunction();">Click Me - helloFunction()</a></p>
+    </body>
+</html>
