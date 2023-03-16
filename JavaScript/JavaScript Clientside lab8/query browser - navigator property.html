@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SET08101 - Interacting with the Window</title>
+    </head>
+    <body>
+        <h1>Query browser</h1>
+
+        <div id="output"></div>
+
+        <script>
+            var out = document.getElementById("output");
+            out.innerHTML += "appName = " + window.navigator.appName + "<br>appVersion = " + window.navigator.appVersion + "<br>appCodeName = " + window.navigator.appCodeName;
+        </script>
+    </body>
+</html>

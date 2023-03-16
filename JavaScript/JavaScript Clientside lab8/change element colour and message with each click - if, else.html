@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            p {color:red}
+        </style>
+        <title>SET08101 - Interacting with the DOM</title>
+    </head>
+    <body>
+        <p><a href="#" onclick="changeColour();">Click Me</a></p>
+        <h1>OUTPUT:</h1>
+        <p id='redPara'>I am RED</p>
+
+        <script>
+            var current="red"; // stores current colour, sets when page is loaded, ie. to start with variable is not linked to href
+            var message= "I am RED";
+
+            // function starts here, each click calls this and updates 'current', so does not reset current var each time
+            function changeColour(){
+                if(current === "red") {// === strict operator, always considers operands of different types to be different
+                    current = "blue";
+                    message = "I am BLUE";
+                } else {
+                    current = "red";
+                    message = "I am RED";
+                }
+
+                document.getElementById("redPara").style.color = current;
+                document.getElementById("redPara").innerHTML = message;
+            }
+        </script>
+    </body>
+</html>
