@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test DOM Storage</title>
+        <script src="./test_web_DOM_storage.js"></script>
+    </head>
+    <body>
+        <h1>Test DOM Storage</h1>
+        <p>Check console</p>
+
+        <script>
+            if(storageAvailiable('localStorage')) {
+                console.log('DOM storage availiable');
+                // can now use storage
+            } else {
+                console.log('DOM storage NOT availiable');
+                // Have to come up with an alternative way to store data
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cookies</title>
+        <script src="./getSetCookies.js"></script>
+    </head>
+    <body>
+        <h1>Open dev tools console</h1>
+
+        <p>To view cookies manually, go to applications tab, select cookies on left hand side</p>
+        <p><a href="#" onclick="deleteCookieUsername();">Delete Cookie</a></p>
+        <p><a href="#" onclick="setCookie('password', 'hello', 2);">Set Cookie</a></p>
+        <script>// add content of quoted string to cookie string for current page
+            document.cookie = "username = Andy";
+
+            // retrives cookie string
+            var x = document.cookie;
+
+            // logs entire cookie string to console
+            console.log(x);
+
+            // sets expiry date for cookie (particular key/value pair will be deleted after this date)
+            document.cookie = "password=secret; expires=Thu, 23 Mar 2023 12:00:00 UTC";
+        
+            // retrieves specific value from cookie
+            console.log(getCookie('username'));
+        </script>
+        
+    </body>
+</html>

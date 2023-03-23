@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Using JSON</title>
+    </head>
+    <body>
+        <h1>Using JSON</h1>
+        <h3>Open developer tools console</h3>
+        <p>Following is run from script</p>
+        <p>var j_str = '{"firstname":"Andy"}';</p>
+        <p>var j_obj = JSON.parse(j_str);</p>
+        <p>Both are loged to console</p>
+        <p>Adds element to JS object:<br>
+        j_obj['lastname'] = 'Dickinson';</p>
+        <p>Convers JS object into JSON string:<br>
+        var s = JSON.stringify(j_obj);<br>
+        console.log("stringifyed JS object = ", s);</p>
+        <script>
+            // JSON encoded as a string and stored in j_str
+            var j_str = '{"firstname":"Andy"}';
+
+            // Parse method converts strings into JS objects, arrays or basic datatypes
+            // so they can be used for computation by JS
+            var j_obj = JSON.parse(j_str);
+
+            console.log("j_obj = ", j_obj);
+            console.log("j_str = ", j_str);
+
+            // Adds element to JS object
+            j_obj['lastname'] = 'Dickinson';
+
+            // Convert JS object into JSON string
+            var s = JSON.stringify(j_obj);
+            console.log("stringifyed JS object = ", s);
+
+        </script>
+    </body>
+</html>
