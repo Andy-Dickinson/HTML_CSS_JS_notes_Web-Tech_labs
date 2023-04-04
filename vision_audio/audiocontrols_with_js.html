@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Audio control with js</title>
+
+        <script src="js/toggle_loop.js"></script>
+    </head>
+    <body>
+        <audio id="my_audio_control" autoplay="autoplay" loop controls>
+            <source src="mp3/horn.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button onclick="toggle_loop()" type="button">Toggle looping</button>
+    </body>
+</html>
