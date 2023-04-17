@@ -1,0 +1,86 @@
+/* note for wrap to work, viewport must be in html file */
+
+/* sets style for all */
+* {
+    font-family: Verdana;
+    margin: 0;
+}
+
+body {
+    background: #eee;
+}
+
+.wrapper {
+    /* 100% of parent */
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* sets outer container 
+comment out to see what happens without flex*/
+.flex-container {
+    display: flex;
+    /* colours entire continer white */
+    background: #fff;
+
+    /* wrap will move an item when reaches minimum width
+    due to flex-grow, it will then take up the entire row 
+    wrap-reverse will place above
+    wont work if flex-grow is set for each item*/
+    /* flex-wrap: wrap-reverse; */
+}
+
+/* sets every container box (flex item) */
+.box {
+    height: 100px;
+    /* min-width: 400px; */
+    /* width: 300px; */
+
+    /* flex-basis is similar to min-width, however will stop things running off the page and having a horizontal scroll bar when it reaches that width as flex will shrink the items to fit 
+    will need to comment out flex-wrap to see this work*/
+    /* flex-basis: 400px; */
+
+    /* allows each item to grow at a rate of 1 into any availiable space left in the flex container 
+    but applying here applies to all*/
+    /* flex-grow: 1;
+
+    flex-shrink: 1; */
+
+    /* can define all grow shrink basis in one line 
+    flex: 1; would set growth and shrink to 1 and basis to 0*/
+    flex: 1 1 400px;
+}
+
+/* each of these is block level element
+so when container display: flex is commented
+out, each takes up its own row */
+.one {
+    background: red;
+
+
+    /* imagine a grid of 12 columns (can be any number, can specify how many each box should take up, here 2
+    the other boxes are set to take up the remaining
+
+    If grow is only specified here, the others will keep the min-width 100px, whilst this one takes the remaining space*/
+    /* flex-grow: 2; */
+
+
+    /* flex-shirk determines the rate at which items shrink in relation to one another. The higher the rate, the faster it shrinks as the page gets smaller.
+    Would also need to fix the width of the boxes rather than min-width above*/
+    /* flex-shrink: 1; */
+}
+
+.two {
+    background: blue;
+
+    /* flex-grow: 6; */
+    /* flex-shrink: 4; */
+}
+
+.three {
+    background: green;
+
+    /* flex-grow: 4; */
+    /* flex-shrink: 10; */
+}

@@ -1,0 +1,196 @@
+/* play about with attributes by commented out / changing values */
+
+img {
+    /* sets image to maximum width of parent (or the viewport if not set)
+        ie this allows the image to be restricted to the size of the window */
+    max-width: 100%;
+ }
+
+/* attributes for ALL h1 tags */
+h1 {
+    /* changes text colour of all h1 */
+    color: orange;
+
+    /* changes background colour for h1 */
+    background-color: slategray;
+
+    /* change font size to pixels high*/
+    font-size: 20px;
+
+    /* line through text (strikethrough)*/
+    text-decoration: line-through;
+
+    /* underline */
+    text-decoration: underline;
+
+    /* remove any text decoration styles (such as the underline above)*/
+    text-decoration: none;
+
+    /* set text font 
+    ENSURE to use 'web safe font':
+    Arial (sans-serif)
+    Verdana (sans-serif)
+    Tahoma (sans-serif)
+    Trebuchet MS (sans-serif)
+    Times New Roman (serif)
+    Georgia (serif)
+    Garamond (serif)
+    Courier New (monospace)
+    Brush Script MT (cursive)*/
+    font-family: Georgia;
+
+    /* makes text bold */
+    font-weight: bold;
+
+    /* allign text */
+    text-align: center;
+
+    /* make uppercase, can also do lowercase */
+    text-transform: uppercase;
+}
+
+/* attributes for ALL p tags */
+p {
+    /* set vertical spacing between lines in text */
+    line-height: 30px;
+
+    /* spacing between letters 
+    possibly use when using narrow font*/
+    letter-spacing: 2px;
+
+    /* split text into columns */
+    column-count: 3;
+
+    /* spacing between columns */
+    column-gap: 20px;
+}
+
+/* styles only p tags of class*/
+p.demo-adjust-class-of-tag {
+    color: red;
+}
+
+/* styling when a p tag and member of BOTH classes */
+/* adds border to members of both demo... and bordered of p tags */
+p.demo-adjust-class-of-tag.bordered {
+    border: 1px dashed blue;
+    padding: 10px;
+}
+
+/* decendent selector, only selects p elements inside div elements */
+/* this can be multiple layers deep have a space between each
+parent and child.
+Can also target classes/id's with specfic parent types, just add a space
+and specify class/id */
+div p{
+    color: #b76eef;
+}
+
+/* attributes for ALL ul tags */
+ul {
+    /* border around element 
+    wont see any change on its own*/
+    /* border-width: 4px; */
+
+    /* set border style */
+    /* border-style: dashed; */
+
+    /* border colour */
+    /* border-color: blue; */
+
+    /* same as above 3 attributes (apart from colour) in one line 
+    does entire border
+            width style colour*/
+    border: 4px dashed red;
+
+    /* one part of border 
+    can also do top, left, or right
+                    width style colour*/
+    border-bottom: 8px solid chartreuse;
+    border-left: 2px dotted purple;
+
+    /* add margin (space away from element from border)*/
+    /* can also do margin-top/bottom/left/right 
+    block elements have margin collapse when two block elements have margins, they share and will
+    only be as tall as the largest margin of the two*/
+    margin: 50px;
+
+    /* add padding (space towards element from border) */
+    /* can also do padding-top/bottom/left/right */
+    padding: 50px;
+}
+
+/* attributes for ALL li tags */
+li {
+    /* change bullet point type - disc as standard */
+    list-style-type: square;
+
+    /* remove bullet point icons */
+    /* list-style-type: none; */
+
+    /* text shadow - set here with big offsets for clarity
+    parameters are offset of shadow from text:
+            to right, vertical down,  colour of shadow*/
+    text-shadow: 80px 5px #caf119;
+}
+
+/* change text colour of all the anchor tags which have a href 
+which CONTAINES (the * refers to contains) "com", make pink
+and remove the underline */
+a[href*="com"] {
+    color: pink;
+    text-decoration: none;
+}
+
+/* change text colour of all the anchor tags which END ($ refers to end)
+with "com/" */
+a[href$="com/"] {
+    color: rgb(49, 218, 49);
+}
+
+/* refer to class my-block */
+.my-block {
+    /* make inline element a block element */
+    display: block;
+}
+
+/* attributes for ALL span tags */
+span {
+    /* note with inline elements, padding is only applied left/right NOT top/bottom 
+    This means inline elemenets can collapse on top of one another when screen made smaller*/
+    padding: 20px;
+}
+
+
+/* refer to id tags named inline1 */
+/* id's are rarely used in css, more commonly in JavaScript */
+/* id's must be unique per html page */
+/* would be better to do the following with class, but using id to demo referencing id tags */
+#inline1 {
+    /* make block element an inline element*/
+    display: inline;
+
+    /* add margin to inline (note does not apply top/bottom) */
+    margin: 50px;
+}
+
+/* can be more specific with id's (for when id's are used across different html pages) */
+div#inline2 {
+    /* make block element an inline element */
+    display: inline;
+}
+
+#inline3 {
+    /* make block element an inline element */
+    display: inline;
+}
+
+
+/* refer to class inline-block */
+.inline-block {
+    /* allows elements to sit next to one another like inline elements
+    but have margin and padding all the way around like block elements */
+    display: inline-block;
+    margin: 30px;
+    padding: 30px;
+}

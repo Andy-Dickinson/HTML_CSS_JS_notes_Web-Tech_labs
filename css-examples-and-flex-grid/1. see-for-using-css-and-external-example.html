@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example styles</title>
+        <link rel="stylesheet" href="css/using-css-styles.css">
+    </head>
+    <body>
+        <!-- Inline elements
+        Line up next to one another and 
+        Do NOT take up any more room than required 
+        include: span, img, strong, em, a (anchors) 
+        
+        Inline can ONLY have padding and margin left and right of element
+        not above and below
+        (padding - space towards element from border)
+        (margin - space away from element from boarder) -->
+
+
+        <!-- Block level elements
+        Take up WHOLE WIDTH OF PAGE regardless of content
+        ALWAYS starts on a new line
+        include: p, div, headers, ul, li 
+        
+        block elements have padding and margin all around the element (without modifying)
+        (padding - space towards element from border)
+        (margin - space away from element from boarder) 
+        Has margin collapse when two block elements have margins, they share and will
+        only be as tall as the largest margin of the two -->
+
+
+        <!-- default browser styles
+        elements have default setttings which can be viewed in developer
+        tools. Go to elements window and click on an element.
+        If you see "user agent stylesheet" under styles in the bottom window, it
+        is getting its styling from the default browser. These get overwritten when we
+        write our own stylesheets -->
+
+        
+        <img src="img/vmask.jpg" alt="test image">
+
+
+        <!-- is not made red as not a p tag as specified in the css -->
+        <h1 class="demo-adjust-class-of-tag">Examples</h1>
+
+        <p class="demo-adjust-class-of-tag">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical 
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at </p>
+            
+        <!-- note this does not get bordered because it is not a member 
+        of BOTH the classes as specified in the css -->
+        <p class="bordered">Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from 
+            a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the 
+            undoubtable source.</p>
+            
+        <!-- this para is a member of 2 classes, demo... and bordered -->
+        <p class="demo-adjust-class-of-tag bordered">Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" 
+            (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of 
+            ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+            comes from a line in section 1.10.32.</p>
+
+        <div>
+            <h2>More examples</h2>
+            <p>ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical 
+                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at 
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from 
+                a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the 
+                undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" 
+                (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of 
+                ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+                comes from a line in section 1.10.32.</p>
+            <ul>
+                <li>a list item</li>
+                <li>another item</li>
+                <li >one more for luck</li>
+            </ul>
+
+            <span>usually</span>
+            <span > would</span>
+            <span class="my-block"> be (changed to block)</span>
+            <span class="my-block"> next (changed to block)</span>
+            <span> to</span>
+            <span> one</span>
+            <span> another, try making screen smaller and compare to (now block) line above (padding difference)</span>
+
+            <br><br><br><br>
+
+            <div>divs</div>
+            <div> are</div>
+            <div> block</div>
+            <div> elements,</div>
+            <div> usually</div>
+            <!-- would be better to use a class, but this is to demo refering to id
+            id's must be unique per html page -->
+            <div id="inline1"> one</div>
+            <div id="inline2"> per</div>
+            <div id="inline3"> line (each word has been changed to inline)</div> 
+
+            <!-- horizontal rule -->
+            <hr>
+
+            <span>test span</span>
+            <span class="inline-block">my inline block</span>
+
+            <ul>
+                <li>
+                    <a href="https://www.tesco.com/groceries/?icid=dchp_groceriesshopgroceries">Tescos</a>
+                </li>
+                <li>
+                    <a href="https://www.sainsburys.co.uk/shop/gb/groceries">Sainsburys</a>
+                </li>
+                <li>
+                    <a href="https://groceries.asda.com/">Asda</a>
+                </li>
+                <li>    
+                    <a href="https://groceries.morrisons.com/browse">Morrisons</a>
+                </li>
+                <li>    
+                    <a href="https://www.waitrose.com/ecom/shop/browse/groceries">Waitrose</a>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

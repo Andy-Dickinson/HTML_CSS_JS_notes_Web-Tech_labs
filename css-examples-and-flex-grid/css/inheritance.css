@@ -1,0 +1,32 @@
+/* colours all divs and children */
+div {
+    /* is inherited */
+    color: lightcoral;  
+    font-weight: bold; 
+
+    /* NOT inherited */
+    border: 1px solid gray;
+    margin: 40px;
+}
+
+/* allows children to inherit properties not automatically inherited */
+p {
+    border: inherit;
+
+    color: green;
+}
+
+/* decendent selector takes precedence over p below 
+as its more specific and carries more weight than p on its own*/
+div p {
+    color: rgb(18, 11, 83);
+}
+
+/* whatever is declared further down in css takes precedence 
+note the inherited border stays valid though
+only conflicting attributes are changed
+NOTE this would NOT take precedence if above p was instead
+a decendent selector eg: div p { } (see using css file)*/
+p {
+    color: rgb(222, 149, 14);
+}

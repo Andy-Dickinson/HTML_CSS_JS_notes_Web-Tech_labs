@@ -1,0 +1,18 @@
+/* Position attribute can have 5 different settings:
+Static - default starting position of element, can also be used to reset
+    something which has previously been set to a different position
+Relative - shift element around page relative to original position
+    note left moves the element AWAY FROM the left edge (ie right - or relative to left edge)
+    bottom moves element AWAY FROM the bottom edge (ie up - or relative to bottom edge)
+Fixed - relative to viewport (window) so fixed position with left and 
+    top set to 0 would fix element in position whilst scrolling down the page.
+    These again are relative to the left edge, and top edge (can also set relative to the other edges too)
+    Note other elements will be treated as if fixed element is not there,
+    so can loose elements behind it. Maybe try sticky instead?
+Absolute - positions element absolutely relative to its parent element 
+    when the parent ALSO has a position property applied to it (ie not static)
+Sticky - Static to begin with, then fixed when scroll position on a    
+    page reaches a certain point 
+ */
+
+ 
