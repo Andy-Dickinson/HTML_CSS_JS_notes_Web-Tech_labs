@@ -1,5 +1,10 @@
 /* play about with attributes by commented out / changing values */
 
+/* Styles take the following priority order:
+1. (top priority) local element style attribute
+2. last-defined global style in CSS stylesheet or <style> tag
+3. (least priority) element attribute */
+
 img {
     /* sets image to maximum width of parent (or the viewport if not set)
         ie this allows the image to be restricted to the size of the window */
